@@ -28,6 +28,7 @@
          <file name = "${haxelib:hxdiscord-rpc}/src/connection_unix.cpp" if="linux"/> <!--gotta do linux libs-->
          <file name = "${haxelib:hxdiscord-rpc}/src/discord_register_linux.cpp" if="linux" />
         </section>
+        
     </target>
 
     <section id = "vars"> 
