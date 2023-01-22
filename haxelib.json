@@ -1,0 +1,16 @@
+{
+    "name" : "hxdiscord-rpc",
+    "license": "MIT",
+    "tags": [
+        "cross", "cpp", "native", "extern", "game"
+    ],
+    "description": "Moddified version of linc_disord-rpc",
+    "version" : "1.0.0",
+    "releasenote": "Initial release",
+    "contributors": [
+        "Aidan"
+    ],
+    "dependencies" : {
+        "hxcpp" : ""
+    }
+}
