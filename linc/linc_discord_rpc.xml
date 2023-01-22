@@ -17,11 +17,11 @@
 
     <target id="haxe">
         <section if = "windows">
-        <file name = "${haxelib:hxdiscord-rpc}/src/discord_register_win.cpp" if="windows"/> <!--gotta do windows libs-->
+        <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/libs/windows/discord-rpc.lib" if="HXCPP_M64" /> 
         </section>
 
         <section if = "mac">
-        <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/lib/mac/libdiscord-rpc.a" if="HXCPP_M64"/> 
+        <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/libs/mac/libdiscord-rpc.a" if="HXCPP_M64"/> 
         </section>
 
         <section if = "linux">
