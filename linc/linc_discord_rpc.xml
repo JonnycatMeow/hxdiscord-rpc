@@ -25,8 +25,7 @@
         </section>
 
         <section if = "linux">
-         <file name = "${haxelib:hxdiscord-rpc}/src/connection_unix.cpp" if="linux"/> <!--gotta do linux libs-->
-         <file name = "${haxelib:hxdiscord-rpc}/src/discord_register_linux.cpp" if="linux" />
+         <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/libs/linux/libdiscord-rpc.a" /> <!--yes i know its the same file and name from mac but trust me i didn't copy and pate it i build it from source-->
         </section>
         
     </target>
