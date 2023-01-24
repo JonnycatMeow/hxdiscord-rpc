@@ -2,16 +2,8 @@
 
     <files id = "haxe"> 
         <!--gotta sort this out-->
-        <compilerflag value = "-I${haxelib:hxdiscord-rpc}/linc/" /> 
-        <compilerflag value = "-I${haxelib:hxdiscord-rpc}/lib/discord/src/" /> 
+        <compilerflag value = "-I${haxelib:hxdiscord-rpc}/linc/" />  
         <file name = "${haxelib:hxdiscord-rpc}/linc/linc_discord_rpc.cpp" />  
-        <!--mac,ios and linux-->
-        <file name = "${haxelib:hxdiscord-rpc}/lib/discord/src/connection_unix.cpp" if="mac||linux||iphone"/>
-        <file name = "${haxelib:hxdiscord-rpc}/lib/discord/src/discord_register_osx.m" if="mac||iphone"/> 
-        <file name = "${haxelib:hxdiscord-rpc}/src/discord_register_linux.cpp" if="linux" /> 
-        <!--windows-->
-        <file name = "${haxelib:hxdiscord-rpc}/lib/discord/src/connection_win.cpp" if="windows"/>
-        <file name = "${haxelib:hxdiscord-rpc}/lib/discord/src/discord_register_win.cpp" if="windows"/> 
     </files>  
 
     <target id="haxe">
