@@ -5,7 +5,7 @@
         <compilerflag value = "-I${haxelib:hxdiscord-rpc}/linc/" />  
         <file name = "${haxelib:hxdiscord-rpc}/linc/linc_discord_rpc.cpp" />  
     </files>  
-
+    
     <target id="haxe">
         <section if = "windows">
         <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/lib/windows/discord-rpc.lib" if="HXCPP_M64" /> 
@@ -19,9 +19,14 @@
          <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/lib/linux/libdiscord-rpc.a" /> <!--yes i know its the same file and name from mac but trust me i didn't copy and pate it i build it from source-->
         </section> 
 
-        <section if = "iphoneos">
-         <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/lib/iphone/libdiscord-rpc.a" if="HXCPP_ARM64" /> <!--yes i know its the same file and name from mac but trust me i didn't copy and pate it i build it from source-->
-        </section>
+       <section if="ios">
+			<section if="iphoneos">
+				<lib name='${haxelib:hxdiscord-rpc}/lib/discord/lib/iPhone/libdiscord-rpc-iphoneos-64.a' if='HXCPP_ARM64' />
+			</section>
+			<section if="iphonesim">
+				<lib name='${haxelib:hxdiscord-rpc}/lib/discord/lib/iPhone/libdiscord-rpc-iphonesim-64.a' if='HXCPP_ARM64' />
+			</section>
+		</section>
         
     </target>
 
