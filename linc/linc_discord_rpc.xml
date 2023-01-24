@@ -17,19 +17,19 @@
 
     <target id="haxe">
         <section if = "windows">
-        <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/libs/windows/discord-rpc.lib" if="HXCPP_M64" /> 
+        <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/lib/windows/discord-rpc.lib" if="HXCPP_M64" /> 
         </section>
 
         <section if = "mac">
-        <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/libs/mac/libdiscord-rpc.a" if="HXCPP_M64"/> 
+        <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/lib/mac/libdiscord-rpc.a" if="HXCPP_M64"/> 
         </section>
 
         <section if = "linux">
-         <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/libs/linux/libdiscord-rpc.a" /> <!--yes i know its the same file and name from mac but trust me i didn't copy and pate it i build it from source-->
+         <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/lib/linux/libdiscord-rpc.a" /> <!--yes i know its the same file and name from mac but trust me i didn't copy and pate it i build it from source-->
         </section> 
 
         <section if = "iphone">
-         <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/libs/iphone/libdiscord-rpc.a" /> <!--yes i know its the same file and name from mac but trust me i didn't copy and pate it i build it from source-->
+         <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/lib/iphone/libdiscord-rpc.a" /> <!--yes i know its the same file and name from mac but trust me i didn't copy and pate it i build it from source-->
         </section>
         
     </target>
