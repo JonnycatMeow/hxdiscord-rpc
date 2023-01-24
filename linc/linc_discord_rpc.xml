@@ -6,8 +6,8 @@
         <compilerflag value = "-I${haxelib:hxdiscord-rpc}/lib/discord/src/" /> 
         <file name = "${haxelib:hxdiscord-rpc}/linc/linc_discord_rpc.cpp" />  
         <!--mac-->
-        <file name = "${haxelib:hxdiscord-rpc}/lib/discord/src/connection_unix.cpp" if="mac||linux"/>
-        <file name = "${haxelib:hxdiscord-rpc}/lib/discord/src/discord_register_osx.m" if="mac"/> 
+        <file name = "${haxelib:hxdiscord-rpc}/lib/discord/src/connection_unix.cpp" if="mac||linux||iphone"/>
+        <file name = "${haxelib:hxdiscord-rpc}/lib/discord/src/discord_register_osx.m" if="mac||iphone"/> 
         <!--windows-->
         <file name = "${haxelib:hxdiscord-rpc}/lib/discord/src/connection_win.cpp" if="windows"/>
         <file name = "${haxelib:hxdiscord-rpc}/lib/discord/src/discord_register_win.cpp" if="windows"/> 
@@ -26,6 +26,10 @@
 
         <section if = "linux">
          <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/libs/linux/libdiscord-rpc.a" /> <!--yes i know its the same file and name from mac but trust me i didn't copy and pate it i build it from source-->
+        </section> 
+
+        <section if = "iphone">
+         <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/libs/iphone/libdiscord-rpc.a" /> <!--yes i know its the same file and name from mac but trust me i didn't copy and pate it i build it from source-->
         </section>
         
     </target>

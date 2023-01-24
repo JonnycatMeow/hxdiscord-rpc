@@ -1,7 +1,13 @@
 #include <stdio.h>
 #include <sys/stat.h>
 
+#if __has_include(<AppKit/AppKit.h>)
 #import <AppKit/AppKit.h>
+#endif
+
+#if __has_include(<UIKit/UIKit.h>)
+#import <UIKit/UIKit.h>
+#endif
 
 #include "discord_register.h"
 
@@ -50,7 +56,7 @@ static void RegisterURL(const char* applicationId)
 {
     char url[256];
     snprintf(url, sizeof(url), "discord-%s", applicationId);
-    CFStringRef cfURL = CFStringCreateWithCString(NULL, url, kCFStringEncodingUTF8);
+    //CFStringRef = CFStringCreateWithCString(NULL, url, kCFStringEncodingUTF8);
 
     NSString* myBundleId = [[NSBundle mainBundle] bundleIdentifier];
     if (!myBundleId) {
@@ -64,16 +70,18 @@ static void RegisterURL(const char* applicationId)
         return;
     }
 
-    OSStatus status = LSSetDefaultHandlerForURLScheme(cfURL, (__bridge CFStringRef)myBundleId);
+    /*OSStatus status = LSSetDefaultHandlerForURLScheme(cfURL, (__bridge CFStringRef)myBundleId);
+
     if (status != noErr) {
         fprintf(stderr, "Error in LSSetDefaultHandlerForURLScheme: %d\n", (int)status);
         return;
     }
 
     status = LSRegisterURL((__bridge CFURLRef)myURL, true);
+    
     if (status != noErr) {
         fprintf(stderr, "Error in LSRegisterURL: %d\n", (int)status);
-    }
+    }*/
 }
 
 void Discord_Register(const char* applicationId, const char* command)
