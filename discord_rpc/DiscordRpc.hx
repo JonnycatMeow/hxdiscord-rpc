@@ -1,5 +1,9 @@
-package discord_rpc;
+package discord_rpc; 
 
+#if !(mac||linux||windows)
+#error "The current target platform isn't supported by hxdiscord-rpc. If you are targeting Windows/Mac/Linux/Windows and you are getting this message, please contact us.";
+#end 
+    
 import cpp.Callable;
 import cpp.Function;
 import cpp.ConstCharStar;
