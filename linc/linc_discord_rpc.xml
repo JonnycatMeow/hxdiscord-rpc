@@ -19,12 +19,5 @@
          <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/lib/linux/libdiscord-rpc.a" /> <!--yes i know its the same file and name from mac but trust me i didn't copy and pate it i build it from source-->
         </section> 
     </target>
-
-    <section id = "vars"> 
-
-    <set name = "NO_PRECOMPILED_HEADERS" value = "1" /> 
-
-    </section>
-
     
 </xml>
