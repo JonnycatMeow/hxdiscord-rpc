@@ -18,16 +18,6 @@
         <section if = "linux">
          <lib name = "${haxelib:hxdiscord-rpc}/lib/discord/lib/linux/libdiscord-rpc.a" /> <!--yes i know its the same file and name from mac but trust me i didn't copy and pate it i build it from source-->
         </section> 
-
-       <section if="ios">
-			<section if="iphoneos">
-				<lib name='${haxelib:hxdiscord-rpc}/lib/discord/lib/iPhone/libdiscord-rpc-iphoneos-64.a' if='HXCPP_ARM64' />
-			</section>
-			<section if="iphonesim">
-				<lib name='${haxelib:hxdiscord-rpc}/lib/discord/lib/iPhone/libdiscord-rpc-iphonesim-64.a' if='HXCPP_ARM64' />
-			</section>
-		</section>
-        
     </target>
 
     <section id = "vars"> 
